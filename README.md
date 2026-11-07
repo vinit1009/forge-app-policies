@@ -1,0 +1,7 @@
+# Policies for Vinit Shah's Forge apps
+
+Privacy policy and support details for the apps entered in Atlassian Codegeist 2026:
+
+- [Denial Desk](denial-desk.md)
+- [Crash Twin](crash-twin.md)
+- [Promised](promised.md)
