@@ -14,3 +14,4 @@ Security and incident response: [security](security).
 - [Guardrails](guardrails)
 - [Stamp](stamp): page approval for Confluence
 - [Recheck](recheck): stale page reviews for Confluence
+- [Ratecard](ratecard): project cost from worklogs for Jira

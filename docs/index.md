@@ -7,3 +7,4 @@
 - [Handoff](handoff)
 - [Stamp](stamp)
 - [Recheck](recheck)
+- [Ratecard](ratecard)
