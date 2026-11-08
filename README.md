@@ -9,3 +9,5 @@ Privacy policy and support details for the apps entered in Atlassian Codegeist 2
 Documentation for each app: [Promised](docs/promised), [Crash Twin](docs/crash-twin), [Denial Desk](docs/denial-desk).
 
 Security and incident response: [security](security).
+
+- [Handoff](handoff)
