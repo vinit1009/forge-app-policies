@@ -17,13 +17,17 @@ Inside the Atlassian site it is installed on, the app stores:
 - A comment on each covered work item saying who is away until when and who covers, and, if chosen, a change of assignee. These are ordinary Jira changes made as the person using the app.
 - Optionally, a work item holding the brief, created in a project the user chooses.
 
+## Personal data
+
+Snapshots and cover marks hold Atlassian account ids and display names: the person away, who built the brief, the assignees of the work items in it, and the people covering. Email addresses are not stored. Once a week the app reports the stored ids to Atlassian through the Personal Data Reporting API. When Atlassian reports an account as closed, the app deletes that person's own handoff (its snapshot and its cover marks), removes their id elsewhere and shows them as "Former user" where they were covering. When Atlassian reports an account as updated, the app refreshes the stored name. Comments the app posted and brief work items it created are Jira content and follow Jira's own handling of closed accounts.
+
 ## Where data goes
 
 The app runs entirely on Atlassian's Forge platform. It declares no external addresses, so the platform blocks any call to a service outside Atlassian. The Rovo agent and the MCP tools return the same information to the person asking; the app calls no language model of its own.
 
 ## Permissions
 
-Jira: read and write work items (comments, assignee, properties, creating the brief), read users (to search people and show names), app storage. Teamwork Graph: read-only scopes for Jira work items, comments and statuses, Jira projects, Atlassian users and teams, Confluence pages, blog posts and spaces, Atlassian goals and projects, external pull requests and external calendar events. Every action a person takes in the app runs with that person's own permissions.
+Jira: read and write work items (comments, assignee, properties, creating the brief), read users (to search people and show names), app storage, and the personal data report (`report:personal-data`). Teamwork Graph: read-only scopes for Jira work items, comments and statuses, Jira projects, Atlassian users and teams, Confluence pages, blog posts and spaces, Atlassian goals and projects, external pull requests and external calendar events. Every action a person takes in the app runs with that person's own permissions.
 
 ## Removal
 

@@ -10,13 +10,17 @@ The app stores, inside the Atlassian site it is installed on, the promise record
 
 The record is stored on the work item itself, so the same people who can open the work item can see it, and it is removed with the work item.
 
+## Personal data
+
+Promise records hold the Atlassian account id and display name of the person who made each promise. Once a week the app reports these ids to Atlassian through the Personal Data Reporting API. When Atlassian reports an account as closed, the app deletes that person's open suggestions, and on tracked promises keeps the dates and outcome but replaces the name with "Former user" and removes their wording. When Atlassian reports an account as updated, the app refreshes the stored name. Comments and reminders the app posted are Jira content and follow Jira's own handling of closed accounts.
+
 ## Where data goes
 
 The app runs entirely on Atlassian's Forge platform. It declares no external addresses, so the platform blocks any call to a service outside Atlassian. Nothing is sent to the developer or to any third party. The developer has no access to any customer's site or data.
 
 ## Permissions
 
-The app asks only for the Jira scopes it needs to read and write work items and their properties, and for Forge storage. Every action a person takes in the app runs with that person's own Jira permissions.
+The app asks only for the Jira scopes it needs to read and write work items and their properties, for Forge storage, and for `report:personal-data` to send the weekly personal data report. Every action a person takes in the app runs with that person's own Jira permissions.
 
 ## Removal
 
