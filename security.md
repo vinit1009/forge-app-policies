@@ -15,6 +15,20 @@ This page describes how the Forge apps published by Vinit Shah (Promised, Crash 
 - Code changes reach the production branch only through pull requests. Source code is kept in private repositories with the Marketplace copy on a separate branch.
 - Development happens on encrypted workstations with automatic operating system updates. Account passwords are generated, unique and kept in the macOS keychain.
 
+## Operational practices
+
+These are the practices behind the answers given in Atlassian's partner security questionnaire. They are reviewed at least once a year and whenever the apps change materially.
+
+- **Access control.** One person operates the Marketplace partner account, the GitHub account and the Forge developer console. Two-step verification is enforced on all of them. Accounts, active sessions, API tokens and authorised applications are reviewed quarterly, and anything no longer needed is revoked.
+- **Infrastructure and patching.** The apps have no servers of their own. They run on Atlassian Forge, which manages the runtime, operating system, backups and encryption at rest. Forge runtime deprecations are tracked and the apps are moved to a supported runtime before the old one reaches end of support. Workstations run a supported macOS version with automatic updates and full disk encryption.
+- **Dependencies and software bill of materials.** Each app's lockfile is its software bill of materials. `npm audit` runs before every release and at least quarterly, and a release does not ship while a production dependency has a known vulnerability with an available fix.
+- **Testing before release.** Changes are covered by unit tests and exercised in a Forge development environment before being deployed to production. Production changes are made only through pull requests.
+- **Logs.** Forge invocation logs and account security logs are available only to the partner account. Logs never include credentials, tokens or personal data beyond work item keys and counts.
+- **Incident response.** The incident plan below is reviewed and walked through at least once a year and after any real incident.
+- **Business continuity.** Customer data lives in Forge storage and Jira entity properties on the customer's own site, so the apps hold nothing that needs a separate backup. Recovering the app itself is a redeploy from source control.
+- **Compliance.** The apps are reviewed against the Marketplace security requirements and the Forge platform policies at every major release and at least once a year.
+- **AI and machine learning.** The apps do not use AI or machine learning models. All logic is deterministic and runs inside Forge; no Atlassian data is sent to any model.
+
 ## Reporting a vulnerability
 
 Email **vinit@vinitshah.dev** with the app name, the steps to reproduce, and the impact you believe it has. You will get an acknowledgement within two business days. Please do not test against customer sites you do not own.
