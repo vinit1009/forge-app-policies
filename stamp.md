@@ -12,13 +12,17 @@ For each page under approval the app keeps one record in Forge storage, inside y
 
 The app reads the pages under approval (title, version, body) with the permissions of the signed-in person when they use it, and with its own permissions when it reacts to a page edit. It posts footer comments on those pages when approval is requested or decided, if the space allows it. It never edits, restricts, moves or deletes pages.
 
+## Personal data
+
+Approval records and space settings hold Atlassian account ids: who requested approval, the approvers and their notes, and each space's default approvers. Once a week the app reports these ids to Atlassian through the Personal Data Reporting API. When Atlassian reports an account as closed, the app keeps each decision and its date but replaces the person with "Former user", removes their notes, and drops them from default approver lists. Comments the app posted on pages are Confluence content and follow Confluence's own handling of closed accounts.
+
 ## Where data goes
 
 Nowhere outside Atlassian. The app has no servers of its own, declares no external endpoints, and sends nothing to third parties. It uses no analytics, telemetry or language models.
 
 ## Permissions
 
-`storage:app` for the records and settings; `read:page:confluence` to read the pages under approval; `write:comment:confluence` to post the request and decision comments; `read:confluence-content.summary` and `write:confluence-content` only because Confluence requires them for the page-updated, trashed and deleted events the app listens to.
+`storage:app` for the records and settings; `read:page:confluence` to read the pages under approval; `write:comment:confluence` to post the request and decision comments; `read:confluence-content.summary` and `write:confluence-content` only because Confluence requires them for the page-updated, trashed and deleted events the app listens to; `report:personal-data` for the weekly personal data report.
 
 ## Removal
 
