@@ -15,3 +15,4 @@ Security and incident response: [security](security).
 - [Stamp](stamp): page approval for Confluence
 - [Recheck](recheck): stale page reviews for Confluence
 - [Ratecard](ratecard): project cost from worklogs for Jira
+- [Readout](readout): portal reports for Jira Service Management
