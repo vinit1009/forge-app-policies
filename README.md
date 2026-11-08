@@ -13,3 +13,4 @@ Security and incident response: [security](security).
 - [Handoff](handoff)
 - [Guardrails](guardrails)
 - [Stamp](stamp): page approval for Confluence
+- [Recheck](recheck): stale page reviews for Confluence
