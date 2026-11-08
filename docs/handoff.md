@@ -37,7 +37,7 @@ Pick the person who is back and press **What changed while they were away?** Han
 
 ## The Handoff agent in Rovo
 
-Choose the **Handoff** agent in Rovo chat and ask, for example:
+The free edition shared by installation link includes a Rovo agent (the Marketplace edition does not yet). Choose the **Handoff** agent in Rovo chat and ask, for example:
 
 - "I am off from Monday for two weeks, what do I need to hand over?"
 - "Who is away?"
