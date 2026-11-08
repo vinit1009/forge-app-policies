@@ -5,3 +5,4 @@
 - [Denial Desk](denial-desk)
 - [Guardrails](guardrails)
 - [Handoff](handoff)
+- [Stamp](stamp)
