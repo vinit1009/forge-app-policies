@@ -14,7 +14,7 @@ Only Jira administrators see rates and per-person costs. Project and work item c
 
 ## Personal data
 
-The rate table holds Atlassian account ids. Once a week the app reports these ids to Atlassian through the Personal Data Reporting API and deletes the rates of any account that has been closed.
+The rate table holds Atlassian account ids. Once a week the app reports these ids to Atlassian through the Personal Data Reporting API and deletes the rates of any account that has been closed. To keep pages fast, the app also caches each computed cost view, which includes people's names and per-person costs, for five minutes; cached views expire after an hour and Forge deletes expired entries within 48 hours.
 
 ## Where data goes
 
