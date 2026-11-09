@@ -74,4 +74,4 @@ Runtime dependencies are the Forge SDK packages (`@forge/api`, `@forge/bridge`, 
 
 ---
 
-Support: see the [Denial Desk privacy and support page](../denial-desk). Email vinitshah209@gmail.com.
+Support: see the [Denial Desk privacy and support page](../denial-desk). Email vinit@vinitshah.dev.

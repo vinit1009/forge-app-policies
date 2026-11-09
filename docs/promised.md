@@ -128,4 +128,4 @@ Runtime dependencies are the Forge SDK packages (`@forge/api`, `@forge/bridge`, 
 
 ---
 
-Support: see the [Promised privacy and support page](../promised). Email vinitshah209@gmail.com.
+Support: see the [Promised privacy and support page](../promised). Email vinit@vinitshah.dev.

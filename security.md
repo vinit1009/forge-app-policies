@@ -46,7 +46,7 @@ Confirmed vulnerabilities are fixed within Atlassian's Marketplace security bug 
 
 ## Contacts
 
-- Security and incident contact: vinit@vinitshah.dev (Vinit Shah, who also holds the Atlassian ecosystem support account vinitshah209@gmail.com).
+- Security and incident contact: vinit@vinitshah.dev (Vinit Shah, who also holds the Atlassian ecosystem support account vinit@vinitshah.dev).
 - Support for each app: see the app's page on this site.
 
 Last reviewed: 2026-11-07.

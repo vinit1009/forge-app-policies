@@ -79,4 +79,4 @@ Runtime dependencies are the Forge SDK packages (`@forge/api`, `@forge/bridge`, 
 
 ---
 
-Support: see the [Crash Twin privacy and support page](../crash-twin). Email vinitshah209@gmail.com.
+Support: see the [Crash Twin privacy and support page](../crash-twin). Email vinit@vinitshah.dev.

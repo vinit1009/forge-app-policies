@@ -24,4 +24,4 @@ Uninstalling the app removes its Forge storage. Records stored on work items are
 
 ## Support
 
-Questions and problems: vinitshah209@gmail.com.
+Questions and problems: vinit@vinitshah.dev.
